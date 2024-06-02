@@ -5,15 +5,15 @@ var no_tab_mode = 1;
 var mermaid_enabled = 1;
 var toc_pane_div = "right_pane_content";
 var dir_index_pane_div = "";
-var html_url_prefix = "";
-var CONFIGURED_HTML_URL_PREFIX = "";
+var html_url_prefix = "/Databases-Notes---MyNote-Test";
+var CONFIGURED_HTML_URL_PREFIX = "/Databases-Notes---MyNote-Test";
 var CONFIG_ONLY_SHOW_FOR_MULTIPLE_HEADERS = 1;
 var CONFIG_CLOSE_RIGHT_PANE_IF_EMPTY = 1;
 var CONFIG_CLOSE_LEFT_PANE_IF_EMPTY = 0;
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '75192540344182666511103772427000897120'                       // used to check whether the localStorage data is stale
+var gzip_hash = '297151352358137223519080851668150419704'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
@@ -62,9 +62,9 @@ function set_rel_paths(){
     for (let el of list) {
         let href = el.getAttribute('href');
         if (href){
-            if (href.startsWith(CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/')){
-                href = href.replace(CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/', '');
-            }
+            if (href.startsWith(CONFIGURED_HTML_URL_PREFIX + '/')){
+                href = href.replace(CONFIGURED_HTML_URL_PREFIX + '/', '');
+            } 
             else {
                 href = href.substring(1)
             }
@@ -108,7 +108,7 @@ function load_theme() {
 
 function disable_antiflash() {
     if (document.getElementById('antiflash')){
-        document.getElementById('antiflash').style.display = 'none';
+        document.getElementById('antiflash').style.display = 'none'; 
     }
 }
 
@@ -121,7 +121,7 @@ function set_theme(theme_name){
 
     let body = document.body;
 
-    // update localstorage
+    // update localstorage 
     ls_set('theme_name', theme_name);
 
     // update select element
@@ -183,7 +183,7 @@ function load_page() {
                 l.onclick = function () {
                     // remove current url from the link
                     let current_url = document.URL
-                    current_url = decodeURI(current_url.replace(window.location.protocol + '/Databases-Notes---MyNote-Test//', '').replace(window.location.host, ''))
+                    current_url = decodeURI(current_url.replace(window.location.protocol + '//', '').replace(window.location.host, ''))
                     current_url = current_url.split('#')[0];
 
                     let link = decodeURI(this.getAttribute("href"))
@@ -196,14 +196,14 @@ function load_page() {
                         window.location.href = link;
                         return false;
                     }
-
+                    
                     // we scroll to the anchor
                     // we do this manually because scrolling divs suck
                     let levelcont = document.getElementsByClassName("container")[0];
                     let header = document.getElementById("header")
                     var el = levelcont.querySelectorAll(link.replaceAll(':', '\\:'))[0];
                     if (el) {
-                        getParentContainer(el).scrollTop = el.offsetTop - (rem(1) + header.getBoundingClientRect().height)
+                        getParentContainer(el).scrollTop = el.offsetTop - (rem(1) + header.getBoundingClientRect().height) 
                         el.classList.add('fade-it');
                         setTimeout(function() {
                             el.classList.remove('fade-it');
@@ -253,7 +253,7 @@ function load_page() {
         let path_to_open = ''
         var href = window.location.href;
         if (href.includes('?path=')) {
-            path_to_open = href.split('?path=')[1].split('/Databases-Notes---MyNote-Test/');
+            path_to_open = href.split('?path=')[1].split('/');
             for (let i = 0; i < path_to_open.length; i++) {
                 path_to_open[i] = decodeURIComponent(path_to_open[i]);
             }
@@ -314,14 +314,14 @@ function SetSidePanes() {
 function CloseSidePaneIfEmpty(pane_div, pane_content_div) {
     if (!pane_content_div){
         pane_div.classList.remove("active");
-    }
+    } 
     if (pane_content_div && pane_content_div.innerHTML.trim() == ""){
         pane_div.classList.remove("active");
     }
 }
 
 function SetContainer(container) {
-    // This function is called on every (newly created) container.
+    // This function is called on every (newly created) container. 
     // One container holds one tab
 
     // Set url
@@ -343,7 +343,7 @@ function SetContainer(container) {
 
     // callout divs are created with class 'active' to have them folded open by default
     // when js is enabled (in this case) this class is removed so the callouts are folded closed until clicked on
-    // new divs are distinguished from old ones by rasa="1"/Databases-Notes---MyNote-Test/rasa="0" resp.
+    // new divs are distinguished from old ones by rasa="1"/rasa="0" resp.
     let callout_folded = container.querySelectorAll(".callout-folded");
     callout_folded.forEach(div => {
         let rasa = div.getAttribute('rasa')
@@ -371,7 +371,7 @@ function SetContainer(container) {
         graph_show_button[0].setAttribute('level', container.level);
         graph_show_button[0].id = graph_show_button[0].id.replace('{level}', container.level)
     }
-
+    
     let graph_type_button = container.querySelectorAll(".graph_type_button");
     if (graph_type_button.length == 1) {
         graph_type_button[0].id = graph_type_button[0].id.replace('{level}', container.level)
@@ -451,7 +451,7 @@ function toggle_menu(){
     // (html hack for having a fixed header and correct vertical scrolling...)
     let h2 = document.getElementById('header2')
 
-
+    
     let res = toggle_id('navbar')
     if (!res){
         // If the menu is turned off --> also close the theme selector
@@ -464,7 +464,7 @@ function toggle_menu(){
     }
 }
 
-// Core Functions
+// Core Functions 
 // ----------------------------------------------------------------------------
 function ls_test_available(){
     if (fn_cache_ls_available != null){
@@ -495,7 +495,7 @@ function httpGetAsync(theUrl, callback, level, callbackpath) {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp, level, theUrl, callbackpath);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
 }
 
@@ -519,18 +519,18 @@ function load_script_on_demand(path, callback, callback_args){
 
 function get_graph_data(){
     if (RELATIVE_PATHS){
-        let page_depth = window.location.pathname.split('/Databases-Notes---MyNote-Test/').length - CONFIGURED_HTML_URL_PREFIX.split('/Databases-Notes---MyNote-Test/').length - 1;
+        let page_depth = window.location.pathname.split('/').length - CONFIGURED_HTML_URL_PREFIX.split('/').length - 1;
         if (page_depth > 0){
-            return '../'.repeat(page_depth) + '/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
+            return '../'.repeat(page_depth) + '/obs.html/data/graph.json';
         }
         else {
-            return './' + '/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
+            return './' + '/obs.html/data/graph.json';
         }
     }
-    return get_html_url_prefix()+'/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
+    return get_html_url_prefix()+'/obs.html/data/graph.json';
 }
 function get_html_url_prefix(){
-    return ''  // this value is replaced by the actual url prefix when compiled
+    return '/Databases-Notes---MyNote-Test'  // this value is replaced by the actual url prefix when compiled
 }
 
 function signal_js_enabled(container){
@@ -540,7 +540,7 @@ function signal_js_enabled(container){
     });
 }
 
-// Helper Functions
+// Helper Functions 
 // ----------------------------------------------------------------------------
 
 function rem(rem) {
@@ -625,7 +625,7 @@ function isPartOfLink(element) {
 	  }
 	  parentElement = parentElement.parentElement;
 	}
-
+  
 	// If no link element found, return false
 	return false;
 }
@@ -639,7 +639,7 @@ function wrap_imgs_with_links(container) {
 		let wrapper = document.createElement('a');
 		wrapper.setAttribute('href',img.src);
 		wrapper.setAttribute("target", "_blank");
-
+		
 		// put img in link
 		img.parentNode.insertBefore(wrapper, img);
 		wrapper.appendChild(img);

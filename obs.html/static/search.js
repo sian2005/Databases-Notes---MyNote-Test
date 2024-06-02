@@ -7,7 +7,7 @@ var SEARCH_DATA = [];                          // SEARCH_DATA_SOURCE with change
 
 var URL_MODE = 'absolute';
 var RELATIVE_PATHS = 0;
-var CONFIGURED_HTML_URL_PREFIX = '';
+var CONFIGURED_HTML_URL_PREFIX = '/Databases-Notes---MyNote-Test';
 var TRY_PRELOAD = 0;
 
 var fuse;                               // fuzzy search object
@@ -88,7 +88,7 @@ async function LoadSearchData(){
     // no cached data available, get data and cache it when possible
     console.log('Loading search data from file...')
 
-    GetGzipContentsAsB64Str(CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/obs.html/data/search.json.gzip').then(gzipped_data_str => {
+    GetGzipContentsAsB64Str(CONFIGURED_HTML_URL_PREFIX + '/obs.html/data/search.json.gzip').then(gzipped_data_str => {
 
         ls_set('search_hash', gzip_hash);
 
@@ -100,7 +100,7 @@ async function LoadSearchData(){
         try {
             ls_set('search_data', search_data);
             console.log('Caching search_data... Done')
-        }
+        } 
         catch (error) {
             console.error(error);
             console.log('Caching search_data... Failed')
@@ -109,7 +109,7 @@ async function LoadSearchData(){
             try {
                 ls_set('search_data_zipped_b64_str', gzipped_data_str);
                 console.log('Caching search_data_zipped_b64_str... Done.')
-            }
+            } 
             catch (error) {
                 console.error(error);
                 console.log('Caching search_data_zipped_b64_str... Failed')
@@ -118,7 +118,7 @@ async function LoadSearchData(){
 
         SEARCH_DATA_SOURCE = JSON.parse(search_data);
         console.log('Loading search data from file... Done')
-
+        
         return end_function()
     })
 }
@@ -153,7 +153,7 @@ function InitFlexSearch(){
 // -----------------------------------------------------------------------------------------------
 function get_node_url_adaptive(node){
     if (URL_MODE == 'relative'){
-        return CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/' + node.rtr_url;
+        return CONFIGURED_HTML_URL_PREFIX + '/' + node.rtr_url;
     }
     if (URL_MODE == 'absolute'){
         return node.url;
@@ -227,7 +227,7 @@ function GetHtmlFlex(fs_results, search_string, hard_search) {
         <div class="search-result-title-name" onclick="click_list_link(this)">
             <a href="{{url}}">{{title}}</a>
         </div>
-        <div class="search-result-icon" onclick="toggle(this.parentElement.parentElement);">
+        <div class="search-result-icon" onclick="toggle(this.parentElement.parentElement);"> 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
     </div>
@@ -313,7 +313,7 @@ function highlight(input_string, match_string, match_middle, border) {
     let match_end = [];
 
     let nonwordchars2 = '[]() \n.,`↩#…;'  // don't include /,<,> lest the <em> tags are disturbed in a later step.
-    let nonwordchars = nonwordchars2 + '/Databases-Notes---MyNote-Test/<>'
+    let nonwordchars = nonwordchars2 + '/<>'
 
     function html_encode(ch){
         if (ch == '<'){
@@ -348,7 +348,7 @@ function highlight(input_string, match_string, match_middle, border) {
                     continue;
                 }
             }
-
+            
             if (match_index == m_len - 1) {
                 match_end.push(i)
             }
