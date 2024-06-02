@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="index">
+                <meta name="node_id" content="create table">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/Databases-Notes---MyNote-Test/favicon.ico" />
 
@@ -57,9 +57,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'index';
+                        const CURRENT_NODE = 'create table';
                         const HTML_URL_PREFIX = '';
-                        const PAGE_DEPTH = 0;
+                        const PAGE_DEPTH = 4;
                 </script>
         </head>
 
@@ -181,7 +181,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/Databases-Notes---MyNote-Test/obs.html/graph/index.html?node=index" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/Databases-Notes---MyNote-Test/obs.html/graph/index.html?node=create table" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/Databases-Notes---MyNote-Test/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/Databases-Notes---MyNote-Test/>
             </a>
         </div>
@@ -216,10 +216,10 @@
                         <div id="left_pane" class="left_pane active">
     <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
     <div id="left_pane_content" class="left_pane_content">
-            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>4.3 Databases</button>
-<div id="folder-container-1" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases">
-	<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>DMS</button>
-	<div id="folder-container-2" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS">
+            <div id="dirtree"><button id="folder-1" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>4.3 Databases</button>
+<div id="folder-container-1" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases">
+	<button id="folder-2" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>DMS</button>
+	<div id="folder-container-2" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS">
 		<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>NoSQL</button>
 		<div id="folder-container-3" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/NoSQL">
 			<ul class="dir-list">
@@ -228,12 +228,12 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/NoSQL/Scaling Relational Databases.html"  >Scaling Relational Databases</a></li>
 			</ul>
 		</div>
-		<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>SQL</button>
-		<div id="folder-container-4" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL">
-			<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Data Definition Language</button>
-			<div id="folder-container-5" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language">
+		<button id="folder-4" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>SQL</button>
+		<div id="folder-container-4" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL">
+			<button id="folder-5" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>Data Definition Language</button>
+			<div id="folder-container-5" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language">
 				<ul class="dir-list">
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language/CREATE TABLE.html"  >CREATE TABLE</a></li>
+					<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language/CREATE TABLE.html"  >CREATE TABLE</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language/Data Definition Language.html"  >Data Definition Language</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language/Foreign Key.html"  >Foreign Key</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Data Definition Language/Primary Key.html"  >Primary Key</a></li>
@@ -472,60 +472,87 @@
 	</ul>
 </div>
 <ul class="dir-list">
-	<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/index.html"  >index</a></li>
+	<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/index.html"  >index</a></li>
 </ul>
 </div>
     </div>
 </div>
                         <div class="container">
-                                <div class="content"><h1 id="index">index</h1>
-<p>Course provided by Maastricht University, notes by Sian Lodde and Friends   </p>
-<h3 id="index_1">Index</h3>
+                                <div class="content"><h1 id="create-table">CREATE TABLE</h1>
+<p><em>SQL Data Definition Language for creating a relation</em>   </p>
+<p>Syntax:   </p>
+<div class="lang-sql">
+
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table_name</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">attribute_1</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">modifiers</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">attribute_2</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">modifiers</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">attribute_3</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">modifiers</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">key_definitions</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">);</span>
+</code></pre></div>
+
+
+</div>
+
+<p>These modifiers include:   </p>
 <ul>
-<li>
-<p>Period 2   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Computer Science</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Discrete Mathematics</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Procedural Programming</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 3   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Calculus</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Logic</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Objects in Programming</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 4   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Linear Algebra</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Data Structures and Algorithms</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Object-Oriented Modelling</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 5   </p>
-<ol>
-<li></li>
-<li><a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Database.html">Database</a>   </li>
-</ol>
-</li>
+<li><strong>DEFAULT</strong> - When the <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Attribute.html">Attribute</a> is not specified in the <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/DMS/SQL/Data%20Modification%20Language/INSERT.html">INSERT</a> statement, this default value is used.   </li>
+<li><strong>NOT NULL</strong> - Indicate that this attribute cannot be null   </li>
 </ul>
-<h3 id="quotes">Quotes</h3>
-<ul>
-<li>
-<p>There is nothing as permanent as a temporary fix. - Koung 3/26/2024   </p>
-<ul>
-<li>If it is working, do not touch it. - Koung 3/26/2024   </li>
-</ul>
-</li>
-<li>
-<p>These people will never understand how funny I am in Spanish. - Alexandra 3:17 5/29/2024   </p>
-</li>
-</ul></div>
+<h3 id="alter-a-table">Alter a Table</h3>
+<div class="lang-sql">
+
+<div class="codehilite"><pre><span></span><code><span class="c1">-- To alter a relation</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Customers</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">dob</span><span class="w"> </span><span class="nb">DATE</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Customers</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">dob</span><span class="p">;</span>
+
+<span class="c1">-- To delete a relation:</span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+
+
+</div>
+
+<h3 id="example">Example</h3>
+<div class="lang-sql">
+
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">maker</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+<span class="w">    </span><span class="k">type</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+
+</div>
+
+<div class="lang-sql">
+
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Sales</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">customer_id</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+<span class="w">    </span><span class="n">quantity</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+<span class="w">    </span><span class="k">day</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">paid</span><span class="w"> </span><span class="nb">REAL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">type_of_payment</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+
+</div>
+
+<h3 id="example-default-values">Example: Default Values</h3>
+<div class="lang-sql">
+
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">maker</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="nb">CHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="k">type</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;pc&#39;</span>
+<span class="p">);</span>
+</code></pre></div>
+
+
+</div></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -540,17 +567,17 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A48972115103340819505120556557329815686{level}" class="graph_div"></div>
+    <div id="A127828999204025465090781545164035511396{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D48972115103340819505120556557329815686{level}">
+    <div class="graph-instructions" id="D127828999204025465090781545164035511396{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
 
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B48972115103340819505120556557329815686{level}" level="{level}" note_temp_id="48972115103340819505120556557329815686" onclick="window.ObsHtmlGraph.run(this, '48972115103340819505120556557329815686', 'index');">
+        <button class="graph_button graph_show_button" id="B127828999204025465090781545164035511396{level}" level="{level}" note_temp_id="127828999204025465090781545164035511396" onclick="window.ObsHtmlGraph.run(this, '127828999204025465090781545164035511396', 'create table');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C48972115103340819505120556557329815686{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C127828999204025465090781545164035511396{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

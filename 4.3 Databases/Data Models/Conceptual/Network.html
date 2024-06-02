@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="index">
+                <meta name="node_id" content="network">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/Databases-Notes---MyNote-Test/favicon.ico" />
 
@@ -57,9 +57,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'index';
+                        const CURRENT_NODE = 'network';
                         const HTML_URL_PREFIX = '';
-                        const PAGE_DEPTH = 0;
+                        const PAGE_DEPTH = 3;
                 </script>
         </head>
 
@@ -181,7 +181,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/Databases-Notes---MyNote-Test/obs.html/graph/index.html?node=index" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/Databases-Notes---MyNote-Test/obs.html/graph/index.html?node=network" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/Databases-Notes---MyNote-Test/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/Databases-Notes---MyNote-Test/>
             </a>
         </div>
@@ -216,8 +216,8 @@
                         <div id="left_pane" class="left_pane active">
     <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
     <div id="left_pane_content" class="left_pane_content">
-            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>4.3 Databases</button>
-<div id="folder-container-1" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases">
+            <div id="dirtree"><button id="folder-1" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>4.3 Databases</button>
+<div id="folder-container-1" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases">
 	<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>DMS</button>
 	<div id="folder-container-2" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/DMS">
 		<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>NoSQL</button>
@@ -334,10 +334,10 @@
 			<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/Database Management System.html"  >Database Management System</a></li>
 		</ul>
 	</div>
-	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Data Models</button>
-	<div id="folder-container-15" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models">
-		<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Conceptual</button>
-		<div id="folder-container-16" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual">
+	<button id="folder-15" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>Data Models</button>
+	<div id="folder-container-15" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models">
+		<button id="folder-16" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>Conceptual</button>
+		<div id="folder-container-16" class="dir-container requires_js active" path="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual">
 			<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Document Based</button>
 			<div id="folder-container-17" class="dir-container requires_js " path="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Document Based">
 				<ul class="dir-list">
@@ -351,7 +351,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Graph.html"  >Graph</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Hierarchical.html"  >Hierarchical</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Key-Value.html"  >Key-Value</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Network.html"  >Network</a></li>
+				<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Network.html"  >Network</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Object-based.html"  >Object-based</a></li>
 			</ul>
 		</div>
@@ -472,65 +472,20 @@
 	</ul>
 </div>
 <ul class="dir-list">
-	<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/index.html"  >index</a></li>
+	<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/index.html"  >index</a></li>
 </ul>
 </div>
     </div>
 </div>
                         <div class="container">
-                                <div class="content"><h1 id="index">index</h1>
-<p>Course provided by Maastricht University, notes by Sian Lodde and Friends   </p>
-<h3 id="index_1">Index</h3>
-<ul>
-<li>
-<p>Period 2   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Computer Science</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Discrete Mathematics</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Procedural Programming</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 3   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Calculus</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Logic</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Objects in Programming</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 4   </p>
-<ol>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Linear Algebra</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Data Structures and Algorithms</a>   </li>
-<li><a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">Object-Oriented Modelling</a>   </li>
-</ol>
-</li>
-<li>
-<p>Period 5   </p>
-<ol>
-<li></li>
-<li><a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Database.html">Database</a>   </li>
-</ol>
-</li>
-</ul>
-<h3 id="quotes">Quotes</h3>
-<ul>
-<li>
-<p>There is nothing as permanent as a temporary fix. - Koung 3/26/2024   </p>
-<ul>
-<li>If it is working, do not touch it. - Koung 3/26/2024   </li>
-</ul>
-</li>
-<li>
-<p>These people will never understand how funny I am in Spanish. - Alexandra 3:17 5/29/2024   </p>
-</li>
-</ul></div>
+                                <div class="content"><h1 id="network">Network</h1>
+<p>Nodes represent data, which can be internally connected. A use case of this would be a transactional / loan system.   </p>
+<p>A network is not always a graph, it can have many disconnected nodes.   </p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/DMS/SQL/Queries/Query.html">query</a></li>
+	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Data Models/Conceptual/Conceptual.html">conceptual</a></li>
 </ul>
 </div>
 
@@ -540,17 +495,17 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A48972115103340819505120556557329815686{level}" class="graph_div"></div>
+    <div id="A199235182417408394604392478360165255727{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D48972115103340819505120556557329815686{level}">
+    <div class="graph-instructions" id="D199235182417408394604392478360165255727{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
 
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B48972115103340819505120556557329815686{level}" level="{level}" note_temp_id="48972115103340819505120556557329815686" onclick="window.ObsHtmlGraph.run(this, '48972115103340819505120556557329815686', 'index');">
+        <button class="graph_button graph_show_button" id="B199235182417408394604392478360165255727{level}" level="{level}" note_temp_id="199235182417408394604392478360165255727" onclick="window.ObsHtmlGraph.run(this, '199235182417408394604392478360165255727', 'network');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C48972115103340819505120556557329815686{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C199235182417408394604392478360165255727{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
