@@ -343,7 +343,7 @@ function SetContainer(container) {
 
     // callout divs are created with class 'active' to have them folded open by default
     // when js is enabled (in this case) this class is removed so the callouts are folded closed until clicked on
-    // new divs are distinguished from old ones by rasa="1"/Databases-Notes---MyNote-Test/rasa="0" resp.
+    // new divs are distinguished from old ones by rasa="1"/Databases-Notes---MyNote-Test/docs/rasa="0" resp.
     let callout_folded = container.querySelectorAll(".callout-folded");
     callout_folded.forEach(div => {
         let rasa = div.getAttribute('rasa')

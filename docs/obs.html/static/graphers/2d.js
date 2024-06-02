@@ -3,7 +3,7 @@ function run(args) {
     if (window.ObsHtmlGraph.graph_dependencies_loaded['2d'] == false){
         // load three dependencies in succession and then run initGraph(args)
         load_script_on_demand(
-            '//unpkg.com/force-graph', load_script_on_demand, ["/Databases-Notes---MyNote-Test//unpkg.com/d3-force", load_script_on_demand, ["https://d3js.org/d3.v4.min.js", initGraph, [args]]]
+            '//unpkg.com/force-graph', load_script_on_demand, ["/Databases-Notes---MyNote-Test/docs//unpkg.com/d3-force", load_script_on_demand, ["https://d3js.org/d3.v4.min.js", initGraph, [args]]]
         )
         // tell obshtml that the dependencies have been loaded
         window.ObsHtmlGraph.graph_dependencies_loaded['2d'] = true;
