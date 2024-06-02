@@ -16,9 +16,9 @@ var graphers_hash = {
 }
 // // DYNAMIC
 // ///////////////////////////////////////////////////////////////////////////////
-// import * as grapher_custom from '/obs.html/static/graphers/custom.js';
-// import * as grapher_3d from '/obs.html/static/graphers/3d.js';
-// import * as grapher_2d from '/obs.html/static/graphers/2d.js';
+// import * as grapher_custom from '/Databases-Notes---MyNote-Test/obs.html/static/graphers/custom.js';
+// import * as grapher_3d from '/Databases-Notes---MyNote-Test/obs.html/static/graphers/3d.js';
+// import * as grapher_2d from '/Databases-Notes---MyNote-Test/obs.html/static/graphers/2d.js';
 
 // var graphers = [
 // 	{'id': 'custom', 'name': 'custom', 'module': grapher_custom},
@@ -98,7 +98,7 @@ function add_graph(uid, pinned_node, grapher_id, container){
 }
 function remove_graph(uid, cont, close){
     cont.innerHTML = "";
-    
+
     if (close){
         delete graphs[uid];
     } else {
@@ -126,7 +126,7 @@ function arm_page(container){
     // update graph buttons that don't have a grapher_id attribute set
     let graph_type_buttons = container.querySelectorAll(".graph_type_button");
     graph_type_buttons.forEach(
-        graph_type_button => 
+        graph_type_button =>
         {
             let grapher_id_button = graph_type_button.getAttribute('grapher_id')
             if (!grapher_id_button){
@@ -145,7 +145,7 @@ function run(button, ntid, pinned_node)
 
     let cont = document.getElementById('A'+uid);
     let type_button = document.getElementById('C'+uid);
-    
+
     let grapher_id = type_button.getAttribute('grapher_id')
 
     // add new graph listing if not yet exists
@@ -197,11 +197,11 @@ function get_graph_args(uid){
 
         let args = {
                 'uid': uid,
-                'graph_container': cont, 
-                'width': width, 
-                'height': height, 
-                'data': data, 
-                'node': null, 
+                'graph_container': cont,
+                'width': width,
+                'height': height,
+                'data': data,
+                'node': null,
                 'link': null,
                 'coalesce_force': '-30'
             }
@@ -313,7 +313,7 @@ function graph_open_link_tabs(args){
 
     return function() {
         let level = parseInt(args.graph_container.parentElement.parentElement.level);
-        httpGetAsync(encodeURI(url), ReceiveCall, level+1, false); 
+        httpGetAsync(encodeURI(url), ReceiveCall, level+1, false);
         return false;
     }
 }
@@ -330,7 +330,7 @@ function get_node_url_adaptive(node){
     // build url: relative path
     if (URL_MODE == 'relative'){
         let url = node.rtr_url;
-        let page_depth = window.location.pathname.split('/').length - CONFIGURED_HTML_URL_PREFIX.split('/').length - 1;
+        let page_depth = window.location.pathname.split('/Databases-Notes---MyNote-Test/').length - CONFIGURED_HTML_URL_PREFIX.split('/Databases-Notes---MyNote-Test/').length - 1;
         if (page_depth > 0){
             return '../'.repeat(page_depth) + url;
         }
@@ -387,12 +387,12 @@ function clone(obj) {
 }
 
 
-export { 
+export {
     test,
     switch_graph_type,
-    run, 
-    graphs, 
-    graph_dependencies_loaded, 
+    run,
+    graphs,
+    graph_dependencies_loaded,
     default_actions,
     graph_select_node,
     graph_open_link_normal,

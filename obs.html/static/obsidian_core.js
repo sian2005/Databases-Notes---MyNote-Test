@@ -62,8 +62,8 @@ function set_rel_paths(){
     for (let el of list) {
         let href = el.getAttribute('href');
         if (href){
-            if (href.startsWith(CONFIGURED_HTML_URL_PREFIX + '/')){
-                href = href.replace(CONFIGURED_HTML_URL_PREFIX + '/', '');
+            if (href.startsWith(CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/')){
+                href = href.replace(CONFIGURED_HTML_URL_PREFIX + '/Databases-Notes---MyNote-Test/', '');
             }
             else {
                 href = href.substring(1)
@@ -183,7 +183,7 @@ function load_page() {
                 l.onclick = function () {
                     // remove current url from the link
                     let current_url = document.URL
-                    current_url = decodeURI(current_url.replace(window.location.protocol + '//', '').replace(window.location.host, ''))
+                    current_url = decodeURI(current_url.replace(window.location.protocol + '/Databases-Notes---MyNote-Test//', '').replace(window.location.host, ''))
                     current_url = current_url.split('#')[0];
 
                     let link = decodeURI(this.getAttribute("href"))
@@ -253,7 +253,7 @@ function load_page() {
         let path_to_open = ''
         var href = window.location.href;
         if (href.includes('?path=')) {
-            path_to_open = href.split('?path=')[1].split('/');
+            path_to_open = href.split('?path=')[1].split('/Databases-Notes---MyNote-Test/');
             for (let i = 0; i < path_to_open.length; i++) {
                 path_to_open[i] = decodeURIComponent(path_to_open[i]);
             }
@@ -519,15 +519,15 @@ function load_script_on_demand(path, callback, callback_args){
 
 function get_graph_data(){
     if (RELATIVE_PATHS){
-        let page_depth = window.location.pathname.split('/').length - CONFIGURED_HTML_URL_PREFIX.split('/').length - 1;
+        let page_depth = window.location.pathname.split('/Databases-Notes---MyNote-Test/').length - CONFIGURED_HTML_URL_PREFIX.split('/Databases-Notes---MyNote-Test/').length - 1;
         if (page_depth > 0){
-            return '../'.repeat(page_depth) + '/obs.html/data/graph.json';
+            return '../'.repeat(page_depth) + '/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
         }
         else {
-            return './' + '/obs.html/data/graph.json';
+            return './' + '/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
         }
     }
-    return get_html_url_prefix()+'/obs.html/data/graph.json';
+    return get_html_url_prefix()+'/Databases-Notes---MyNote-Test/obs.html/data/graph.json';
 }
 function get_html_url_prefix(){
     return ''  // this value is replaced by the actual url prefix when compiled

@@ -22,9 +22,9 @@ function load_dirtree_as_left_pane(xmlHttp, level, theUrl, callbackpath) {
                     return
                 }
             }
-            folder = node.url.split('/')
+            folder = node.url.split('/Databases-Notes---MyNote-Test/')
             filename = folder.pop()
-            folder = folder.join('/')
+            folder = folder.join('/Databases-Notes---MyNote-Test/')
 
             break;
         }
@@ -48,21 +48,21 @@ function load_dirtree_as_left_pane(xmlHttp, level, theUrl, callbackpath) {
 
         let url = node.url
         if (folder != '') {
-            url = url.replace(folder + '/', '')
+            url = url.replace(folder + '/Databases-Notes---MyNote-Test/', '')
         }
-        if (url[0] == '/') {
+        if (url[0] == '/Databases-Notes---MyNote-Test/') {
             url = url.substring(1);
         }
-        if (url.includes('/')) {
+        if (url.includes('/Databases-Notes---MyNote-Test/')) {
             continue
         }
-        if (node.url[0] != '/') {
-            node.url = '/' + node.url;
+        if (node.url[0] != '/Databases-Notes---MyNote-Test/') {
+            node.url = '/Databases-Notes---MyNote-Test/' + node.url;
         }
         links.push({ 'id': node.id, 'url': node.url })
     }
 
-    // skip if no links found        
+    // skip if no links found
     if (links.length < 2) {
         return
     }
