@@ -3575,7 +3575,7 @@
       /* total number of bytes output so far */
       this.total_out = 0;
       /* last error message, NULL if no error */
-      this.msg = ''/Databases-Notes---MyNote-Test/*Z_NULL*/;
+      this.msg = ''/*Z_NULL*/;
       /* not visible by applications */
       this.state = null;
       /* best guess about the data type: binary or text */
