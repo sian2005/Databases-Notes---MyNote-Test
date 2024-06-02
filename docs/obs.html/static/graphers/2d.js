@@ -3,7 +3,7 @@ function run(args) {
     if (window.ObsHtmlGraph.graph_dependencies_loaded['2d'] == false){
         // load three dependencies in succession and then run initGraph(args)
         load_script_on_demand(
-            '//unpkg.com/force-graph', load_script_on_demand, ["//unpkg.com/d3-force", load_script_on_demand, ["https://d3js.org/d3.v4.min.js", initGraph, [args]]]
+            '//unpkg.com/force-graph', load_script_on_demand, ["/Databases-Notes---MyNote-Test//unpkg.com/d3-force", load_script_on_demand, ["https://d3js.org/d3.v4.min.js", initGraph, [args]]]
         )
         // tell obshtml that the dependencies have been loaded
         window.ObsHtmlGraph.graph_dependencies_loaded['2d'] = true;
@@ -52,13 +52,13 @@ function initGraph(args) {
                     const label = node.name;
                     const fontSize = 11 / globalScale;
                     ctx.font = `${fontSize}px Sans-Serif`;
-                    const textWidth = ctx.measureText(label).width;                
+                    const textWidth = ctx.measureText(label).width;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
                     ctx.fillStyle = g.colors.text;
                     ctx.fillText(label, node.x, node.y+8);
                 }
-                
+
                 // color only main node & semiconnected
                 if (node.id != g.current_node_id){
                     if (isConnected){
@@ -114,7 +114,7 @@ function initGraph(args) {
                 g.current_node_id = node.id
                 g.actions['right_click'](args)
             })
-        
+
         setTimeout( () => g.graph.zoomToFit(1000, rem(3), function(n){return initGraphDone(n, args)}), 1000 );
     });
 }
@@ -127,7 +127,7 @@ function initGraphDone(n, args){
     }
     else {
         document.getElementById('D'+args['uid']).classList.remove('fadein');
-    } 
+    }
 
     // zoom toward current node
     zoom_select(n, args)
@@ -164,6 +164,6 @@ function zoom_select(n, args){
 /////////////////////////////////////////////////////////////////////////////////////
 
 // export the run() method so that it can be called by obshtml
-export { 
+export {
     run
 };
