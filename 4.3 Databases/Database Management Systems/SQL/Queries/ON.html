@@ -397,9 +397,10 @@
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/3NF Synthesis Algorithm.html"  >3NF Synthesis Algorithm</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html"  >Boyce-Codd Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html"  >First Normal Form</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Lossless Join.html"  >Lossless Join</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Minimal Basis.html"  >Minimal Basis</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html"  >Normalization</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Prime Attribute.html"  >Prime Attribute</a></li>
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Restructuring.html"  >Restructuring</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html"  >Second Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html"  >Third Normal Form</a></li>
 				</ul>
@@ -412,7 +413,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Logically Related.html"  >Logically Related</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Multivalued Functional Dependency.html"  >Multivalued Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Non-Trivial Functional Dependency.html"  >Non-Trivial Functional Dependency</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Dependencies.html"  >Partial Dependencies</a></li>
+				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Functional Dependencies.html"  >Partial Functional Dependencies</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html"  >Transitive Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Trivial Functional Dependency.html"  >Trivial Functional Dependency</a></li>
 			</ul>
@@ -489,7 +490,7 @@
 
 </div>
 
-<p>Which is equivalent to using the <code>USING</code> keyword, which you can think of as a short-hand.   </p>
+<p>Which is, in this case, almost equivalent to using the <code>USING</code> keyword, which you can think of as a short-hand.   </p>
 <div class="lang-sql">
 
 <div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">model</span>
@@ -498,7 +499,9 @@
 </code></pre></div>
 
 
-</div></div>
+</div>
+
+<p>The pure equivalent clause is the <code>NATURAL JOIN</code>, since that also combines attributes if their names are equal, and otherwise not. That is what the <code>USING</code> does.   </p></div>
 <div class="note-footer">
 <div class="backlinks" style="display:none"></div>
 
@@ -508,17 +511,17 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A23621723744062183050564222269760400416{level}" class="graph_div"></div>
+    <div id="A60393005040715064402574752394181400801{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D23621723744062183050564222269760400416{level}">
+    <div class="graph-instructions" id="D60393005040715064402574752394181400801{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B23621723744062183050564222269760400416{level}" level="{level}" note_temp_id="23621723744062183050564222269760400416" onclick="window.ObsHtmlGraph.run(this, '23621723744062183050564222269760400416', 'on');">
+        <button class="graph_button graph_show_button" id="B60393005040715064402574752394181400801{level}" level="{level}" note_temp_id="60393005040715064402574752394181400801" onclick="window.ObsHtmlGraph.run(this, '60393005040715064402574752394181400801', 'on');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C23621723744062183050564222269760400416{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C60393005040715064402574752394181400801{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

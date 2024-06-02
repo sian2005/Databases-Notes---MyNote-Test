@@ -397,9 +397,10 @@
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/3NF Synthesis Algorithm.html"  >3NF Synthesis Algorithm</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html"  >Boyce-Codd Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html"  >First Normal Form</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Lossless Join.html"  >Lossless Join</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Minimal Basis.html"  >Minimal Basis</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html"  >Normalization</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Prime Attribute.html"  >Prime Attribute</a></li>
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Restructuring.html"  >Restructuring</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html"  >Second Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html"  >Third Normal Form</a></li>
 				</ul>
@@ -412,7 +413,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Logically Related.html"  >Logically Related</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Multivalued Functional Dependency.html"  >Multivalued Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Non-Trivial Functional Dependency.html"  >Non-Trivial Functional Dependency</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Dependencies.html"  >Partial Dependencies</a></li>
+				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Functional Dependencies.html"  >Partial Functional Dependencies</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html"  >Transitive Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Trivial Functional Dependency.html"  >Trivial Functional Dependency</a></li>
 			</ul>
@@ -480,24 +481,24 @@
                                 <div class="content"><h1 id="third-normal-form">Third Normal Form</h1>
 <p><span class="arithmatex">\(3NF\)</span>, In between <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Second%20Normal%20Form.html">2NF</a> and and <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Boyce-Codd%20Normal%20Form.html">BCNF</a>.   </p>
 <ul>
-<li>We say a relation <span class="arithmatex">\(R\)</span> is in <span class="arithmatex">\(3NF\)</span> if for each nontrivial FD <span class="arithmatex">\(X \to A\)</span> that holds in <span class="arithmatex">\(R\)</span> , either <span class="arithmatex">\(X\)</span> is a super key of <span class="arithmatex">\(R\)</span> <strong>or</strong> <span class="arithmatex">\(A\)</span> is prime.   </li>
+<li>We say a relation <span class="arithmatex">\(R\)</span> is in <span class="arithmatex">\(3NF\)</span> if for each <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Non-Trivial%20Functional%20Dependency.html">nontrivial FD</a> <span class="arithmatex">\(X \to A\)</span> that holds in <span class="arithmatex">\(R\)</span> , either <span class="arithmatex">\(X\)</span> is a super key of <span class="arithmatex">\(R\)</span> <strong>or</strong> <span class="arithmatex">\(A\)</span> is prime.   </li>
 </ul>
 <p>Either on the left hand side you have a super key, or on the left side you have a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">Prime Attribute</a>   </p>
 <div class="arithmatex">\[
-\begin{align*}\\
+\begin{align*}
 \text{LHS} \ \ \text{or}&amp; \ \ \ \text{RHS}\\ 
 SK\ \ \to&amp;\  \ \ PA  
 \end{align*}
 \]</div>
 <ul>
-<li>Alternative definition: <span class="arithmatex">\(R\)</span> is in <span class="arithmatex">\(3NF\)</span> if every non-prime attribute of <span class="arithmatex">\(R\)</span> is <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Transitive%20Functional%20Dependency.html">Non transitive dependency</a> on every key of <span class="arithmatex">\(R\)</span>.   </li>
+<li>Alternative definition: <span class="arithmatex">\(R\)</span> is in <span class="arithmatex">\(3NF\)</span> if every <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">non-prime attribute</a> of <span class="arithmatex">\(R\)</span> is <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Transitive%20Functional%20Dependency.html">not transitively dependent</a> on every <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Key.html">key</a> of <span class="arithmatex">\(R\)</span>.   </li>
 </ul>
 <blockquote>
 <p>You split one table in two, some important functional dependencies will disappear. BCNF is not always a good idea.   </p>
 </blockquote>
 <p>There are two important properties of a decomposition   </p>
 <ol>
-<li><strong>Lossless Join</strong> - it should be possible to project the original relations onto the decomposed schema, and then reconstruct the original.   </li>
+<li><strong><a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Lossless%20Join.html">Lossless Join</a></strong> - it should be possible to project the original relations onto the decomposed schema, and then reconstruct the original.   </li>
 <li><strong>Dependency Preservation</strong> - it should be possible to check in the projected relations whether all the given FDs are satisfied.   </li>
 </ol>
 <p>I have a table, that table has <span class="arithmatex">\(3\)</span> columns, street, city and zip code <br />
@@ -513,7 +514,7 @@ SK\ \ \to&amp;\  \ \ PA
 <ul>
 <li>In our problem situation with <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a> <span class="arithmatex">\(AB \to C\)</span> and <span class="arithmatex">\(C \to B\)</span> , we have keys <span class="arithmatex">\(AB\)</span> and <span class="arithmatex">\(AC\)</span>.   </li>
 <li>Thus <span class="arithmatex">\(A, B\)</span> and <span class="arithmatex">\(C\)</span> are each prime.   </li>
-<li>Although <span class="arithmatex">\(C \to B\)</span> violates <span class="arithmatex">\(BCNF\)</span>, it does not violate <span class="arithmatex">\(3NF\)</span>.   </li>
+<li>Although <span class="arithmatex">\(C \to B\)</span> violates <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Boyce-Codd%20Normal%20Form.html">BCNF</a>, it does not violate <span class="arithmatex">\(3NF\)</span>.   </li>
 </ul></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -530,17 +531,17 @@ SK\ \ \to&amp;\  \ \ PA
 
 </div>
 <div class="graph requires_js ">
-    <div id="A295591693532794160016726205398538122848{level}" class="graph_div"></div>
+    <div id="A19398742763804610710864225059271171658{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D295591693532794160016726205398538122848{level}">
+    <div class="graph-instructions" id="D19398742763804610710864225059271171658{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B295591693532794160016726205398538122848{level}" level="{level}" note_temp_id="295591693532794160016726205398538122848" onclick="window.ObsHtmlGraph.run(this, '295591693532794160016726205398538122848', 'third normal form');">
+        <button class="graph_button graph_show_button" id="B19398742763804610710864225059271171658{level}" level="{level}" note_temp_id="19398742763804610710864225059271171658" onclick="window.ObsHtmlGraph.run(this, '19398742763804610710864225059271171658', 'third normal form');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C295591693532794160016726205398538122848{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C19398742763804610710864225059271171658{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

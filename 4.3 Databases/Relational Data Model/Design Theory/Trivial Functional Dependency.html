@@ -397,9 +397,10 @@
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/3NF Synthesis Algorithm.html"  >3NF Synthesis Algorithm</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html"  >Boyce-Codd Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html"  >First Normal Form</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Lossless Join.html"  >Lossless Join</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Minimal Basis.html"  >Minimal Basis</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html"  >Normalization</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Prime Attribute.html"  >Prime Attribute</a></li>
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Restructuring.html"  >Restructuring</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html"  >Second Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html"  >Third Normal Form</a></li>
 				</ul>
@@ -412,7 +413,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Logically Related.html"  >Logically Related</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Multivalued Functional Dependency.html"  >Multivalued Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Non-Trivial Functional Dependency.html"  >Non-Trivial Functional Dependency</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Dependencies.html"  >Partial Dependencies</a></li>
+				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Functional Dependencies.html"  >Partial Functional Dependencies</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html"  >Transitive Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Trivial Functional Dependency.html"  >Trivial Functional Dependency</a></li>
 			</ul>
@@ -478,8 +479,8 @@
 </div>
                         <div class="container">
                                 <div class="content"><h1 id="trivial-functional-dependency">Trivial Functional Dependency</h1>
-<p><em>A trivial <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> is that an attribute Functionally Determines itself, which all attributes do!</em>   </p>
-<p>Unique attributes (incl. primary keys) always determine all other attributes.   </p>
+<p><em>A trivial <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> is that an <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Attribute.html">attribute</a> Functionally Determines itself, which all attributes do!</em>   </p>
+<p>Unique attributes (incl. <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Database%20Management%20Systems/SQL/Data%20Definition%20Language/Primary%20Key.html">primary keys</a>) always determine all other attributes.   </p>
 <ul>
 <li>Let <span class="arithmatex">\(X\)</span> be a set of attributes and let <span class="arithmatex">\(A\)</span> be one of them. Then <span class="arithmatex">\(X \to A\)</span>.   </li>
 <li>Let <span class="arithmatex">\(Z\)</span> be the set of all attributes of relation <span class="arithmatex">\(R\)</span>, then <span class="arithmatex">\(Z \to A\)</span> for any attribute <span class="arithmatex">\(A\)</span> of relation <span class="arithmatex">\(R\)</span>.   </li>
@@ -489,7 +490,7 @@
 \begin{align*}
 Z&amp;= \{\text{student\_{id}}, \text{student\_{id}}, \text{adress}\}\\
 A&amp;= \{\text{adress}\}\\
-A&amp;\subset Z
+A&amp;\subset Z: Z \to A
 \end{align*}
 \]</div></div>
 <div class="note-footer">
@@ -506,17 +507,17 @@ A&amp;\subset Z
 
 </div>
 <div class="graph requires_js ">
-    <div id="A273667536245212542035360674803290670848{level}" class="graph_div"></div>
+    <div id="A332847675415675100921645673358981996231{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D273667536245212542035360674803290670848{level}">
+    <div class="graph-instructions" id="D332847675415675100921645673358981996231{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B273667536245212542035360674803290670848{level}" level="{level}" note_temp_id="273667536245212542035360674803290670848" onclick="window.ObsHtmlGraph.run(this, '273667536245212542035360674803290670848', 'trivial functional dependency');">
+        <button class="graph_button graph_show_button" id="B332847675415675100921645673358981996231{level}" level="{level}" note_temp_id="332847675415675100921645673358981996231" onclick="window.ObsHtmlGraph.run(this, '332847675415675100921645673358981996231', 'trivial functional dependency');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C273667536245212542035360674803290670848{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C332847675415675100921645673358981996231{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

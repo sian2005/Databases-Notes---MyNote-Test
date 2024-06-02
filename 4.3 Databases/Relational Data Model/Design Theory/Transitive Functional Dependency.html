@@ -397,9 +397,10 @@
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/3NF Synthesis Algorithm.html"  >3NF Synthesis Algorithm</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html"  >Boyce-Codd Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html"  >First Normal Form</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Lossless Join.html"  >Lossless Join</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Minimal Basis.html"  >Minimal Basis</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html"  >Normalization</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Prime Attribute.html"  >Prime Attribute</a></li>
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Restructuring.html"  >Restructuring</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html"  >Second Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html"  >Third Normal Form</a></li>
 				</ul>
@@ -412,7 +413,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Logically Related.html"  >Logically Related</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Multivalued Functional Dependency.html"  >Multivalued Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Non-Trivial Functional Dependency.html"  >Non-Trivial Functional Dependency</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Dependencies.html"  >Partial Dependencies</a></li>
+				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Functional Dependencies.html"  >Partial Functional Dependencies</a></li>
 				<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html"  >Transitive Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Trivial Functional Dependency.html"  >Trivial Functional Dependency</a></li>
 			</ul>
@@ -478,8 +479,8 @@
 </div>
                         <div class="container">
                                 <div class="content"><h1 id="transitive-functional-dependency">Transitive Functional Dependency</h1>
-<p><em>If you can get from A to B to C you can also get from A directly to C when B is not a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">prime attribute</a> of the set of <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Key.html">keys</a></em>   </p>
-<p>A <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> <span class="arithmatex">\(X \to A\)</span> in a relation <span class="arithmatex">\(R\)</span> is a transitive FD if there exists a set of attributes <span class="arithmatex">\(Z\)</span> in <span class="arithmatex">\(R\)</span> that is neither a key nor a subset of any key of <span class="arithmatex">\(R\)</span> and both <span class="arithmatex">\(X \to Z\)</span> and <span class="arithmatex">\(Z \to A\)</span> hold. See the <a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">math equivalent concept</a>.   </p>
+<p><em>If you can get from <span class="arithmatex">\(A \to B \to C\)</span> you can also get from <span class="arithmatex">\(A\)</span> directly to <span class="arithmatex">\(C\)</span>. It is bad when <span class="arithmatex">\(B\)</span> is not a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">prime attribute</a> of the set of <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Key.html">keys</a></em>   </p>
+<p>A <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> <span class="arithmatex">\(X \to A\)</span> in a relation <span class="arithmatex">\(R\)</span> is a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Transitive%20Functional%20Dependency.html">transitive FD</a> if there exists a set of attributes <span class="arithmatex">\(Z\)</span> in <span class="arithmatex">\(R\)</span> that is neither a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Key.html">key</a> nor a subset of any key of <span class="arithmatex">\(R\)</span> and both <span class="arithmatex">\(X \to Z\)</span> and <span class="arithmatex">\(Z \to A\)</span> hold. See the <a href="/Databases-Notes---MyNote-Test/not_created.html" class="nonexistent-link">math equivalent concept</a>.   </p>
 <ul>
 <li>customer_id <span class="arithmatex">\(\to\)</span> city   </li>
 <li>model <span class="arithmatex">\(\to\)</span> maker   </li>
@@ -502,6 +503,7 @@
 <ul>
 	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html">first normal form</a></li>
 	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Functional Dependencies.html">functional dependencies</a></li>
+	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html">transitive functional dependency</a></li>
 	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html">boyce-codd normal form</a></li>
 	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html">second normal form</a></li>
 	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html">third normal form</a></li>
@@ -514,17 +516,17 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A299986356508072457290999394971398339080{level}" class="graph_div"></div>
+    <div id="A246604852347198721818668308395006961711{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D299986356508072457290999394971398339080{level}">
+    <div class="graph-instructions" id="D246604852347198721818668308395006961711{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B299986356508072457290999394971398339080{level}" level="{level}" note_temp_id="299986356508072457290999394971398339080" onclick="window.ObsHtmlGraph.run(this, '299986356508072457290999394971398339080', 'transitive functional dependency');">
+        <button class="graph_button graph_show_button" id="B246604852347198721818668308395006961711{level}" level="{level}" note_temp_id="246604852347198721818668308395006961711" onclick="window.ObsHtmlGraph.run(this, '246604852347198721818668308395006961711', 'transitive functional dependency');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C299986356508072457290999394971398339080{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C246604852347198721818668308395006961711{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

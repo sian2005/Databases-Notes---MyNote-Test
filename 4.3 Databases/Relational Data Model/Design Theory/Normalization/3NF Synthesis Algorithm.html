@@ -397,9 +397,10 @@
 					<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/3NF Synthesis Algorithm.html"  >3NF Synthesis Algorithm</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Boyce-Codd Normal Form.html"  >Boyce-Codd Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/First Normal Form.html"  >First Normal Form</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Lossless Join.html"  >Lossless Join</a></li>
+					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Minimal Basis.html"  >Minimal Basis</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html"  >Normalization</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Prime Attribute.html"  >Prime Attribute</a></li>
-					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Restructuring.html"  >Restructuring</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Second Normal Form.html"  >Second Normal Form</a></li>
 					<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Third Normal Form.html"  >Third Normal Form</a></li>
 				</ul>
@@ -412,7 +413,7 @@
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Logically Related.html"  >Logically Related</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Multivalued Functional Dependency.html"  >Multivalued Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Non-Trivial Functional Dependency.html"  >Non-Trivial Functional Dependency</a></li>
-				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Dependencies.html"  >Partial Dependencies</a></li>
+				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Partial Functional Dependencies.html"  >Partial Functional Dependencies</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Transitive Functional Dependency.html"  >Transitive Functional Dependency</a></li>
 				<li><div class="file-icon"></div><a class="" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Trivial Functional Dependency.html"  >Trivial Functional Dependency</a></li>
 			</ul>
@@ -478,21 +479,22 @@
 </div>
                         <div class="container">
                                 <div class="content"><h1 id="h_3nf-synthesis-algorithm">3NF Synthesis Algorithm</h1>
-<p>Making tables conform to <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Third%20Normal%20Form.html">Third Normal Form</a>. Hard one!   </p>
+<p><em>Making tables conform to <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Third%20Normal%20Form.html">Third Normal Form</a>. Hard one!</em>   </p>
 <ul>
 <li>Consider relation <span class="arithmatex">\(R\)</span> with a set of <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a> <span class="arithmatex">\(F\)</span>.   </li>
-<li>Need minimal basis for <span class="arithmatex">\(F\)</span>   </li>
-</ul>
-<p>Right sides are single attributes.   </p>
-<ul>
+<li>Need minimal basis for <span class="arithmatex">\(F\)</span> - Right sides are single attributes.   </li>
 <li>No <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> can be removed.   </li>
 <li>No attribute can be removed from a left side.   </li>
-<li>Constructing a minimal basis   </li>
-</ul>
-<p>Repeatedly try to remove a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> and see if the remaining <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a> are equivalent to the original.   </p>
-<ul>
+<li>Constructing a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Minimal%20Basis.html">minimal basis</a> - Repeatedly try to remove a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> and see if the remaining <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a> are equivalent to the original.   </li>
 <li>Repeatedly try to remove an attribute from a left side and see if the resulting <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a> are equivalent to the original.   </li>
 </ul>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Find all keys of <span class="arithmatex">\(R\)</span> and check if any <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a> in <span class="arithmatex">\(F\)</span> violates <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Third%20Normal%20Form.html">3NF</a>. If a violation is present then proceed with Step 2. Otherwise stop.   </li>
+<li>Find a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Minimal%20Basis.html">minimal basis</a> <span class="arithmatex">\(G\)</span>.   </li>
+<li>For each <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FD</a>, say <span class="arithmatex">\(X \to A\)</span> in <span class="arithmatex">\(G\)</span>, use <span class="arithmatex">\(XA\)</span> as the <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Database%20Management%20Systems/SQL/Schema/Schema.html">schema</a> of one of the relations in the decomposition.   </li>
+<li>If none of the <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Attribute.html">attribute</a> sets of <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Relation.html">relations</a> from Step 3 is a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Super%20Key.html">super key</a> for <span class="arithmatex">\(R\)</span> , add another <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Relation.html">relation</a> whose <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Database%20Management%20Systems/SQL/Schema/Schema.html">schema</a> is a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Key.html">key</a> for <span class="arithmatex">\(R\)</span>.   </li>
+</ol>
 <h3 id="example">Example</h3>
 <p>Consider <span class="arithmatex">\(R(ABCD)\)</span> with <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">FDs</a>   </p>
 <ul>
@@ -505,13 +507,13 @@
 <li>
 <p><a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">Prime</a>: <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> <br />
    Is the relation already in <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Third%20Normal%20Form.html">3NF</a>? <br />
-   ⮡ A relation is in 3NF if <strong>either</strong>   </p>
+   ⮡ A relation is in <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Third%20Normal%20Form.html">3NF</a> if <strong>either</strong>   </p>
 </li>
 <li>
-<p>A <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Super%20Key.html">super key</a> on the left   </p>
+<p>a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Super%20Key.html">super key</a> on the left   </p>
 </li>
 <li>
-<p>or A <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">Prime Attribute</a> on the right   </p>
+<p>or a <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Normalization/Prime%20Attribute.html">prime attribute</a> on the right   </p>
 </li>
 <li>
 <p>Minimize the set of <a href="/Databases-Notes---MyNote-Test/4.3%20Databases/Relational%20Data%20Model/Design%20Theory/Functional%20Dependencies.html">Functional Dependencies</a>.   </p>
@@ -526,10 +528,14 @@
 &amp; &amp; \text{can get rid of D}\\
 &amp; ABC \to D\\
 \end{align*}
-\]</div>
-<p>We are left with   </p></div>
+\]</div></div>
 <div class="note-footer">
-<div class="backlinks" style="display:none"></div>
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/Databases-Notes---MyNote-Test/4.3 Databases/Relational Data Model/Design Theory/Normalization/Normalization.html">normalization</a></li>
+</ul>
+</div>
 
 <div class="tags">
 
@@ -537,17 +543,17 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A183517854571032521755343670635585864664{level}" class="graph_div"></div>
+    <div id="A290156320851267770955433944089941212739{level}" class="graph_div"></div>
 
-    <div class="graph-instructions" id="D183517854571032521755343670635585864664{level}">
+    <div class="graph-instructions" id="D290156320851267770955433944089941212739{level}">
         Left-click: follow link, Right-click: select node, Scroll: zoom
     </div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B183517854571032521755343670635585864664{level}" level="{level}" note_temp_id="183517854571032521755343670635585864664" onclick="window.ObsHtmlGraph.run(this, '183517854571032521755343670635585864664', '3nf synthesis algorithm');">
+        <button class="graph_button graph_show_button" id="B290156320851267770955433944089941212739{level}" level="{level}" note_temp_id="290156320851267770955433944089941212739" onclick="window.ObsHtmlGraph.run(this, '290156320851267770955433944089941212739', '3nf synthesis algorithm');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C183517854571032521755343670635585864664{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C290156320851267770955433944089941212739{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
